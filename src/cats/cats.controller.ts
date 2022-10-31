@@ -20,8 +20,8 @@ export class CatsController {
   constructor(private readonly catsService: CatsService) {}
 
   @Get()
-  getCurrentCat() {
-    return 'current cat';
+  async getCurrentCat() {
+    return this.catsService.getHello();
   }
 
   @ApiResponse({
